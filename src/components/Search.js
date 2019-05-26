@@ -8,6 +8,7 @@ function Search(){
 		<React.Fragment>
 			<span>Please search for a github user by their <em>username</em></span>
 			<input onChange={onInputChange} />
+			<div />
 		</React.Fragment>
 	)
 }

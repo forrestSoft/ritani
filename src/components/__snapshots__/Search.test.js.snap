@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<Fragment>
+  <span>
+    Please search for a github user by their 
+    <em>
+      username
+    </em>
+  </span>
+  <input
+    onChange={[Function]}
+  />
+  <div />
+</Fragment>
+`;
