@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render matches snapshot 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    Ritani interview assesment
+  </header>
+  <section>
+    <Search
+      handleChange={[Function]}
+    />
+  </section>
+  <section>
+    <DisplayResults
+      users=""
+    />
+  </section>
+</div>
+`;

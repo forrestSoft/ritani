@@ -2,9 +2,8 @@
 
 exports[`render matches snapshot 1`] = `
 <Fragment>
-  <p>
-    I am results
-  </p>
-  <ul />
+  <img
+    src="https://avatars2.githubusercontent.com/u/1555350?v=4"
+  />
 </Fragment>
 `;
