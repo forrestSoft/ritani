@@ -7,12 +7,16 @@ import './App.css';
 
 class App extends Component {
   state = {
-    users: ''
+    users: '',
+    hasMoar: false
   }
 
   handleChange(e){
-    console.log(e.target.value)
-    this.setState({users: staticState})
+    this.setState({users: staticState, hasMoar: true})
+  }
+
+  handleClick(e){
+    this.setState({users: [...staticState, ...staticState], hasMoar: false})
   }
 
   render(){
@@ -20,11 +24,15 @@ class App extends Component {
       <div className="App">
         <header className="App-header">Ritani interview assesment</header>
         <section>
-          <Search handleChange={this.handleChange.bind(this)}/>
+          <Search handleChange={this.handleChange.bind(this)} />
         </section>
         
         <section>
-          <DisplayResults users={this.state.users}/>
+          <DisplayResults 
+            users={this.state.users} 
+            handleClick={this.handleClick.bind(this)} 
+            hasMoar={this.state.hasMoar}
+          />
         </section>
       </div>
     );

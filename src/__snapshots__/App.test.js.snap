@@ -16,6 +16,8 @@ exports[`render matches snapshot 1`] = `
   </section>
   <section>
     <DisplayResults
+      handleClick={[Function]}
+      hasMoar={false}
       users=""
     />
   </section>

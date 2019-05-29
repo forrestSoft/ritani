@@ -3,6 +3,7 @@
 exports[`render matches snapshot 1`] = `
 <Fragment>
   <img
+    alt="avatar for github user Ritani"
     src="https://avatars2.githubusercontent.com/u/1555350?v=4"
   />
 </Fragment>

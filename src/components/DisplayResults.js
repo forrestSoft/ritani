@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Avatar from './Avatar'
 
 function DisplayResults(props){
@@ -8,10 +8,15 @@ function DisplayResults(props){
 			<ul>
 			{ 
 				props.users && props.users.map( (data, i) => {
-					return <Avatar url={data.avatar_url} key={data.avatar_url}/>
+					return <Avatar url={data.avatar_url} username={data.login} key={data.avatar_url}/>
 				}) 
 			}
 			</ul>
+			{ 
+				props.hasMoar === true &&
+					<button onClick={props.handleClick} >Load Moar</button>
+				
+			}
 		</React.Fragment>
 	)
 }
