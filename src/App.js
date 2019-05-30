@@ -76,28 +76,31 @@ class App extends Component {
 
   render(){
     return (
+
       <div className="App" onClick={this.handleClose.bind(this)} >
         <header className="App-header">Ritani interview assesment</header>
-        <section>
-          <Search
-            handleChange={ this.handleChange  }
-            handleClick={this.handleClick.bind(this)}
-            autocomplete_users={this.state.autocomplete_users}
-            autocomplete_total={this.state.autocomplete_total}
-            autocomplete_value={this.state.inputValue}
-            autocomplete_open={this.state.autocomplete_open} />
-        </section>
-        
-        <section>
-          <DisplayResults 
-            users={this.state.followers}
-            hasMoar={this.state.hasMoar}
-            handleClick={this.handleMoar.bind(this)}
-          />
-        </section>
+        <div className="flex">
+          <section class="gr-2">
+            <Search
+              handleChange={ this.handleChange  }
+              handleClick={this.handleClick.bind(this)}
+              autocomplete_users={this.state.autocomplete_users}
+              autocomplete_total={this.state.autocomplete_total}
+              autocomplete_value={this.state.inputValue}
+              autocomplete_open={this.state.autocomplete_open} />
+          </section>
+          
+          <section class="gr-1">
+            <DisplayResults 
+              users={this.state.followers}
+              hasMoar={this.state.hasMoar}
+              handleClick={this.handleMoar.bind(this)}
+            />
+          </section>
+        </div>
       </div>
     );
   }
 }
 
-export default App;
+export default App

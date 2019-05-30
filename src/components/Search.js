@@ -5,7 +5,7 @@ import Autosuggest from './Autosuggest'
 function Search(props){
 	return(
 		<React.Fragment>
-			<span>Please search for a github user by their <em>username</em></span>
+			<span>Search for a github user by their <em>username</em>. Or not. Don't let me tell you what to do.</span>
 
 			<Autosuggest 
 				onChange={props.handleChange}
