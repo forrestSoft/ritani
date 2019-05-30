@@ -8,6 +8,6 @@ exports[`render matches snapshot 1`] = `
       username
     </em>
   </span>
-  <input />
+  <Autosuggest />
 </Fragment>
 `;

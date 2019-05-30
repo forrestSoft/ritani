@@ -2,6 +2,9 @@
 
 exports[`render matches snapshot 1`] = `
 <Fragment>
-  <ul />
+  <input />
+  <p>
+    total users from this query: undefined
+  </p>
 </Fragment>
 `;

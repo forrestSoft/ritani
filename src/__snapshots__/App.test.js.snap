@@ -3,6 +3,7 @@
 exports[`render matches snapshot 1`] = `
 <div
   className="App"
+  onClick={[Function]}
 >
   <header
     className="App-header"
@@ -11,14 +12,19 @@ exports[`render matches snapshot 1`] = `
   </header>
   <section>
     <Search
+      autocomplete_open={false}
+      autocomplete_total={0}
+      autocomplete_users={0}
+      autocomplete_value=""
       handleChange={[Function]}
+      handleClick={[Function]}
     />
   </section>
   <section>
     <DisplayResults
       handleClick={[Function]}
       hasMoar={false}
-      users=""
+      users={Array []}
     />
   </section>
 </div>
