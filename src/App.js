@@ -6,8 +6,8 @@ import {parse_link_header} from './utils'
 import Search from './components/Search'
 import DisplayResults from './components/DisplayResults'
 
-import staticState from './staticState'
 import './App.css';
+import 'normalize.css'
 
 
 const unbounced_handleChange = (text) => {

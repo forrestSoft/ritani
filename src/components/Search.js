@@ -1,10 +1,11 @@
 import React from 'react'
 import Autosuggest from './Autosuggest'
+import './Search.scss'
 
 // TODO manage auto suggest as a passed component and not spaghetti props
 function Search(props){
 	return(
-		<React.Fragment>
+		<section className="search">
 			<span>Search for a github user by their <em>username</em>. Or not. Don't let me tell you what to do.</span>
 
 			<Autosuggest 
@@ -14,7 +15,7 @@ function Search(props){
 				autocomplete_users={props.autocomplete_users}
 				value={props.autocomplete_value}
 				open={props.autocomplete_open}  />
-		</React.Fragment>
+		</section>
 	)
 }
 

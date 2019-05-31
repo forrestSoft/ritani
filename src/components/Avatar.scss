@@ -1,0 +1,44 @@
+.avatar_wrapper {
+	position: relative;
+  display: flex;
+  margin: 3px;  
+  background:#fff;
+  padding: 4px 4px 15px 4px;
+
+  input {
+  	display: block;
+  	margin-top: 2vh;
+    font-size: calc(3vh/2); 
+  }
+
+  img {
+    height: 50px; 
+    width: 50px;
+    z-index: 2;
+    
+    border: 1px solid #ccc;
+    background-clip: content-box;
+
+  }
+  
+  @keyframes img {
+    to {transform: rotate(360deg);}
+  }
+   
+  &:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    margin-left: -15px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    border-top-color: #07d;
+    animation: img .6s linear infinite;
+    // z-index: -1;
+  }
+}

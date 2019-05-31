@@ -1,11 +1,12 @@
 import React from 'react'
 import Avatar from './Avatar'
+import './DisplayResults.scss'
 
 function DisplayResults(props){
 	console.log(props)
 	return(
-		<React.Fragment>
-			<ul>
+		<section className="display_results">
+			<div>
 			{ 
 				props.users && props.users.map( (data, i) => {
 					return <Avatar 
@@ -14,13 +15,13 @@ function DisplayResults(props){
 						key={data.avatar_url}/>
 				}) 
 			}
-			</ul>
+			</div>
 			{ 
 				props.hasMoar &&
 					<button onClick={props.handleClick} >Load Moar</button>
 				
 			}
-		</React.Fragment>
+		</section>
 	)
 }
 

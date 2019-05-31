@@ -1,0 +1,16 @@
+.autosuggest{
+	padding-top: 1vh;
+
+  ul{
+    list-style: none;
+    padding-left: 0;
+	}
+
+  li {
+    display: flex;
+  }
+
+  .avatar_wrapper {
+    margin-right: 2vh;
+  }
+}

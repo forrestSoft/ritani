@@ -1,10 +1,11 @@
 import React from 'react'
 
 import Avatar from './Avatar'
+import './Autosuggest.scss'
 
 function Autosuggest(props){
 	return(
-		<React.Fragment>
+		<div className="autosuggest">
 			<input value={props.value} onChange = { props.onChange } />
 			 { (props.open) ? 
 			 	<div>
@@ -13,8 +14,8 @@ function Autosuggest(props){
 							props.autocomplete_users && props.autocomplete_users.map( (item, i) => {
 								return (
 									<li key={item.login} onClick={props.onClick.bind(this, item.login)} >
-										<Avatar url={item.avatar_url} />
-										{item.login}
+										<Avatar url={item.avatar_url} login={item.login} />
+										<p>{item.login}</p>
 									</li>
 								)
 							})
@@ -24,7 +25,7 @@ function Autosuggest(props){
 				</div> : null }
 
 			
-		</React.Fragment>
+		</div>
 	)
 }
 
