@@ -10,8 +10,6 @@ function handleA(login,f,e){
 function Autosuggest(props){
 	return(
 		<div className="autosuggest">
-		{console.log('a',props.loading)}
-			
 			<span className={props.loading ? 'loading' : null }>
 				<input 
 					value={props.value} 
@@ -39,7 +37,7 @@ function Autosuggest(props){
 							})
 						}
 					</ul> 
-					<span>{`Total users from this query: ${props.total}`}</span> 
+					<aside>{`Total users from this query: ${props.total}`}</aside> 
 				</div> : null }
 		</div>
 	)
