@@ -80,7 +80,7 @@ class App extends Component {
       <div className="App" onClick={this.handleClose.bind(this)} >
         <header className="App-header">Ritani interview assesment</header>
         <div className="flex">
-          <section class="gr-2">
+          <section className="gr-2">
             <Search
               handleChange={ this.handleChange  }
               handleClick={this.handleClick.bind(this)}
@@ -90,7 +90,7 @@ class App extends Component {
               autocomplete_open={this.state.autocomplete_open} />
           </section>
           
-          <section class="gr-1">
+          <section className="gr-1">
             <DisplayResults 
               users={this.state.followers}
               hasMoar={this.state.hasMoar}
