@@ -29,19 +29,6 @@ class App extends Component {
     search_loading: false
   }
 
-  // TODO: is this really the best way to deal with debouncing?
-  handleChange = async (e) => {
-    this.setState({inputValue: e.target.value, search_loading: true})
-
-    const result = await autocomplete_debounce(e.target.value)
-    this.setState({
-      autocomplete_users: result.data.items.slice(0,5),
-      autocomplete_total: result.data.total_count,
-      autocomplete_open: true,
-      search_loading: false
-    })
-  }
-
   handleClick(user, event){
     event.stopPropagation()
 
