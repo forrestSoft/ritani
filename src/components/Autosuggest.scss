@@ -1,14 +1,22 @@
+@import 'rythm';
+@import 'utils';
+
 .autosuggest{
   position: relative;
+
+  nav{
+    margin: 0 1.5vw;
+    padding: 0 1.5vw;
+  }
 
   ul{
     list-style: none;
     padding-left: 0;
-    margin-bottom: 2vw;
+    margin-top:0; 
+    margin-bottom: $s2;
     border-bottom: 1px solid #8e8787;
-    padding-bottom: 2vw;
-    margin: 0 -2vw 1.8vw -2vw;
-    padding: 2vw;
+    padding-bottom: $s2;
+    padding: $s1 0;
 	}
 
   li {
@@ -16,67 +24,46 @@
     align-items: center;
     cursor: pointer;
   }
-  span{
+
+  h4{
+    margin: 0;
+    line-height: $s3
+  }
+
+  section{
     border-bottom: 1px solid #8e8787;
-    display: block;
-    margin: 0 -1.4vw;
-    padding: 0 1.4vw;
+    margin: 0 1.5vw;
+    padding: 0 1.5vw;
   
     input{
+      box-sizing: border-box;
       padding: 1.2vw 1.2vw 1.5vw 1.2vw;
-      background: #adaaaa;
+      margin-bottom: $s1;
       border: 1px solid;
       border-radius: 4px;
       width: 100%;
-      font-size: 2vw;
-      margin-bottom: 3vw;
-      box-sizing: border-box;
 
+      font-size: $s2;
+      
       &::placeholder{
         color: #615858;
         font-style: italic;
       }
     }
-  }
 
-  span.loading{
-    &:before{
-      content: '';
-      box-sizing: border-box;
-      position: absolute;
-      top:1.5vw;
-      left:90%;
-      width: 2vw;
-      height: 2vw;
-      border-radius: 50%;
-      border: 3px solid #acaaaa;
-      border-top-color: #07d;
-      border-left-color: #3088d4;
-      animation: img .6s linear infinite;
-      box-sizing: border-box;
+    &.loading{
+      &:before{
+        @include spinner;
+      }
     }
   }
 
-  aside{
-    font-size: 1.5vw;
-    font-style: italic;
-    color: #534c61;
-    font-weight: lighter;
-  }
   p, a{
     margin: 0;
   }
-
-  a{
-    font-size: 1.4vw;
-    font-weight: 100;
-    font-style: italic;
-    text-decoration: none;
-    color: #521f1f;
-  }
   
   .avatar_wrapper {
-    margin-right: 2vh;
+    margin-right: $s2;
     margin-left: 0;
     padding: 0;
 

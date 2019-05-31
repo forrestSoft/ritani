@@ -1,13 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`render matches snapshot 1`] = `
-<Fragment>
-  <span>
-    Please search for a github user by their 
-    <em>
-      username
-    </em>
-  </span>
-  <Autosuggest />
-</Fragment>
+<section
+  className="search"
+>
+  <h2>
+    Search
+  </h2>
+  <Autosuggest
+    loading={false}
+    onChange={[Function]}
+    open={false}
+    total={null}
+    users={Array []}
+    value=""
+  />
+</section>
 `;

@@ -1,10 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`render matches snapshot 1`] = `
-<Fragment>
-  <input />
-  <p>
-    total users from this query: undefined
-  </p>
-</Fragment>
+<div
+  className="autosuggest"
+>
+  <section
+    className={null}
+  >
+    <input
+      className={null}
+      placeholder="GitHub Username"
+    />
+  </section>
+</div>
 `;

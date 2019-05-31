@@ -3,29 +3,38 @@
 exports[`render matches snapshot 1`] = `
 <div
   className="App"
-  onClick={[Function]}
 >
   <header
     className="App-header"
   >
     Ritani interview assesment
   </header>
-  <section>
-    <Search
-      autocomplete_open={false}
-      autocomplete_total={0}
-      autocomplete_users={0}
-      autocomplete_value=""
-      handleChange={[Function]}
-      handleClick={[Function]}
-    />
-  </section>
-  <section>
-    <DisplayResults
-      handleClick={[Function]}
-      hasMoar={false}
-      users={Array []}
-    />
-  </section>
+  <div
+    className="flex"
+  >
+    <section
+      className="gr-2"
+    >
+      <Search
+        autocomplete_open={false}
+        autocomplete_total={0}
+        autocomplete_users={0}
+        autocomplete_value=""
+        handleClick={[Function]}
+        loading={false}
+      />
+    </section>
+    <section
+      className="gr-1"
+    >
+      <DisplayResults
+        handleClick={[Function]}
+        hasMoar={false}
+        selectedUser={false}
+        totalFollowers={0}
+        users={Array []}
+      />
+    </section>
+  </div>
 </div>
 `;

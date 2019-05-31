@@ -7,7 +7,7 @@ function DisplayResults(props){
 	return(
 		<section className="display_results">
 			{ props.selectedUser &&
-				<p><em>{props.selectedUser}</em> has {props.totalFollowers} followers</p>
+				<h2><em>{props.selectedUser}</em> has {props.totalFollowers} followers</h2>
 			}
 			<div>
 			{ 

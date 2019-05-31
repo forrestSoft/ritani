@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`render matches snapshot 1`] = `
-<Fragment>
-  <ul />
-</Fragment>
+<section
+  className="display_results"
+>
+  <div />
+</section>
 `;
