@@ -27,6 +27,7 @@ class Search extends Component{
     })
 
     const result = await autocomplete_debounce(e.target.value)
+    
     this.setState({
       users: result.data.items.slice(0,5),
       total: result.data.total_count,

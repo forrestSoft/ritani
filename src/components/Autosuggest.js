@@ -27,7 +27,6 @@ function Autosuggest(props){
 export default Autosuggest;
 
 function buildList (props){
-	handleA = handleA.bind
 	return (
 		<nav>
 			<ul>
@@ -39,7 +38,8 @@ function buildList (props){
 									<h4>{item.login}</h4>
 									<a 
 										onClick={handleA.bind(this, item.login, props.onClick)}
-										href={item.html_url}>{item.html_url.replace(/https.+?com/, '')}
+										href={item.html_url}>
+										.{item.html_url.replace(/https.+?com/, '')}
 									</a>
 								</div>
 							</li>

@@ -16,12 +16,7 @@ exports[`render matches snapshot 1`] = `
       className="gr-2"
     >
       <Search
-        autocomplete_open={false}
-        autocomplete_total={0}
-        autocomplete_users={0}
-        autocomplete_value=""
         handleClick={[Function]}
-        loading={false}
       />
     </section>
     <section

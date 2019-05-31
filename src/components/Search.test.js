@@ -8,9 +8,14 @@ it('render matches snapshot', () => {
   expect(search).toMatchSnapshot();
 });
 
-// it('calls passed handleChange on "onChange"', () => {
-// 	const mock = jest.fn().mockReturnValue('default')
-// 	const search = shallow(<Search handleChange={mock}/>)
-// 	search.find('input').simulate('change')
-// 	expect(mock).toBeCalled()
-// })
+it('handles onChange', () => {
+	const search = shallow(<Search />)
+	
+	search.instance().handleChange({
+		target: {
+			value: 'eee'
+		}
+	})
+
+	expect(search.instance().state.inputValue).toBe('eee')
+})

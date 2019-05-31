@@ -6,7 +6,7 @@ exports[`render matches snapshot 1`] = `
     className="avatar_wrapper"
   >
     <img
-      alt="avatar for github user undefined"
+      alt="avatar for github user Ritani"
       src="https://avatars2.githubusercontent.com/u/1555350?v=4"
     />
   </div>

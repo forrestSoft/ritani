@@ -4,6 +4,78 @@ exports[`render matches snapshot 1`] = `
 <section
   className="display_results"
 >
+  <h2>
+    <em>
+      bob
+    </em>
+     has 
+    3
+     followers
+  </h2>
+  <div>
+    <Avatar
+      key="https://avatars2.githubusercontent.com/u/1555350?v=4"
+      url="https://avatars2.githubusercontent.com/u/1555350?v=4"
+      username="myhduck"
+    />
+    <Avatar
+      key="https://avatars0.githubusercontent.com/u/5945?v=4"
+      url="https://avatars0.githubusercontent.com/u/5945?v=4"
+      username="trevor"
+    />
+    <Avatar
+      key="https://avatars0.githubusercontent.com/u/8826?v=4"
+      url="https://avatars0.githubusercontent.com/u/8826?v=4"
+      username="ogijun"
+    />
+  </div>
+</section>
+`;
+
+exports[`render matches snapshot 2`] = `
+<section
+  className="display_results"
+>
+  <h2>
+    <em>
+      bob
+    </em>
+     has 
+    3
+     followers
+  </h2>
   <div />
 </section>
+`;
+
+exports[`render matches snapshot 3`] = `
+<section
+  className="display_results"
+>
+  <h2>
+    <em>
+      bob
+    </em>
+     has 
+     followers
+  </h2>
+  <div />
+</section>
+`;
+
+exports[`render matches snapshot 4`] = `
+<Fragment>
+  <h2>
+    Welcome. Please search to the left
+  </h2>
+  <p>
+    The code for this project is here: 
+    <a
+      href="https://github.com/forrestSoft/ritani"
+      target="blank"
+    >
+      GitHub ⇛
+    </a>
+  </p>
+</Fragment>
 `;
