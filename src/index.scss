@@ -22,6 +22,11 @@ code {
 	flex: 8;
 	margin: 0;
 	
+  a{
+    font-size: 1.5vw;
+    font-weight: bold;
+
+  }
 }
 .gr-2{
 	flex: 5;
@@ -47,3 +52,10 @@ aside{
   color: $c-demph;
   font-weight: lighter;
 }
+
+h2{
+    margin-top: 0;
+    margin-bottom: 1vw;
+    padding: 3vw;
+    padding-bottom: 0;
+  }

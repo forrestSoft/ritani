@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { default as debounce } from 'awesome-debounce-promise';
-import {parse_link_header} from '../utils'
 
 import Autosuggest from './Autosuggest'
 import './Search.scss'
-
 
 const unbounced_handleChange = (text) => {
   return axios(`https://api.github.com/search/users?q=${text}`)
@@ -38,11 +36,9 @@ class Search extends Component{
   }
 
 	render(){
-
 		return(
 			<section className="search">
-			<h2>Search</h2>
-
+				<h2>Search</h2>
 				<Autosuggest 
 					onChange={this.handleChange}
 					onClick={this.props.handleClick}
@@ -50,7 +46,8 @@ class Search extends Component{
 					users={this.state.users}
 					value={this.state.inputValue}
 					open={this.state.open}
-					loading={this.state.loading}/>
+					loading={this.state.loading}
+				/>
 			</section>
 		)
 	}
