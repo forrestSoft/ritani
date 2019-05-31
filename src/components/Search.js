@@ -6,7 +6,7 @@ import './Search.scss'
 function Search(props){
 	return(
 		<section className="search">
-			<span>Search for a github user by their <em>username</em>. Or not. Don't let me tell you what to do.</span>
+		<h2>Search</h2>
 
 			<Autosuggest 
 				onChange={props.handleChange}

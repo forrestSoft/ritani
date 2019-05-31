@@ -6,6 +6,9 @@ function DisplayResults(props){
 	console.log(props)
 	return(
 		<section className="display_results">
+		{ props.selectedUser &&
+			<p><em>{props.selectedUser}</em> has {props.totalFollowers} followers</p>
+		}
 			<div>
 			{ 
 				props.users && props.users.map( (data, i) => {

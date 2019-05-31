@@ -6,7 +6,7 @@ import './Autosuggest.scss'
 function Autosuggest(props){
 	return(
 		<div className="autosuggest">
-			<input value={props.value} onChange = { props.onChange } />
+			<input value={props.value} onChange = { props.onChange } placeholder="GitHub Username" />
 			 { (props.open) ? 
 			 	<div>
 					<ul>
@@ -15,13 +15,16 @@ function Autosuggest(props){
 								return (
 									<li key={item.login} onClick={props.onClick.bind(this, item.login)} >
 										<Avatar url={item.avatar_url} login={item.login} />
-										<p>{item.login}</p>
+										<div>
+											<p>{item.login}</p>
+											<a href={item.html_url}>{item.html_url.replace(/https.+?com/, '')}</a>
+										</div>
 									</li>
 								)
 							})
 						}
 					</ul> 
-					<p>{`total users from this query: ${props.autocomplete_total}`}</p> 
+					<span>{`Total users from this query: ${props.autocomplete_total}`}</span> 
 				</div> : null }
 
 			

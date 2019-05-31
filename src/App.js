@@ -24,7 +24,8 @@ class App extends Component {
     inputValue: '',
     autocomplete_users: 0,
     autocomplete_total: 0,
-    autocomplete_open: false
+    autocomplete_open: false,
+    totalFollowers: 0
   }
 
   // TODO: is this really the best way to deal with debouncing?
@@ -39,22 +40,22 @@ class App extends Component {
     })
   }
 
-  // TODO: this is atrocious and I should be flogged
   handleClick(user, event){
-    this.setState((prevState, props)=>{
-      axios(`https://api.github.com/users/${user}/followers`)
-      .then((xhr)=>{
-        this.setState({
-          followers: xhr.data,
-          hasMoar: (xhr.headers.link && parse_link_header(xhr.headers.link).next) || false
-        })
-      })
+    event.stopPropagation()
 
-      return {
+    const xhr1 = axios(`https://api.github.com/users/${user}/followers`)
+    const xhr2 = axios(`https://api.github.com/users/${user}`)
+
+    Promise.all([xhr1, xhr2])
+    .then((xhrs)=>{
+      this.setState({
+        followers: xhrs[0].data,
+        hasMoar: (xhrs[0].headers.link && parse_link_header(xhrs[0].headers.link).next) || false,
+        totalFollowers: xhrs[1].data.followers,
         selectedUser: user, 
-        inputValue: user, 
-        autocomplete_open: false}
-      })  
+        inputValue: user
+      })
+    })
   }
 
   // This is so slimey
@@ -71,7 +72,8 @@ class App extends Component {
   }
 
   handleClose(){
-    this.setState({autocomplete_open: false})
+    // console.log('close')
+    // this.setState({autocomplete_open: false})
   }
 
   render(){
@@ -95,6 +97,8 @@ class App extends Component {
               users={this.state.followers}
               hasMoar={this.state.hasMoar}
               handleClick={this.handleMoar.bind(this)}
+              selectedUser={this.state.selectedUser}
+              totalFollowers={this.state.totalFollowers}
             />
           </section>
         </div>
