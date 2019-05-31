@@ -1,6 +1,10 @@
 .display_results{
-	padding: 3.5vw;
+	padding: 3vw;
 
+	h2{
+    margin-top: 0;
+    margin-bottom: 1vw;
+	}
 	div{
 		display:flex;
 		flex-wrap: wrap;
