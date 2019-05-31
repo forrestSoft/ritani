@@ -1,5 +1,5 @@
 .autosuggest{
-	padding-top: 1vh;
+  position: relative;
 
   ul{
     list-style: none;
@@ -26,6 +26,24 @@
     }
   }
 
+  span.loading{
+    &:before{
+      content: '';
+      box-sizing: border-box;
+      position: absolute;
+      top:32%;
+      left:90%;
+      width: 2vw;
+      height: 2vw;
+      border-radius: 50%;
+      border: 3px solid #acaaaa;
+      border-top-color: #07d;
+      border-left-color: #3088d4;
+      animation: img .6s linear infinite;
+      box-sizing: border-box;
+    }
+  }
+
   p, a{
     margin: 0;
   }
@@ -43,6 +61,7 @@
     font-style: italic;
     color: #3c3b3b;
   }
+  
   .avatar_wrapper {
     margin-right: 2vh;
     margin-left: 0;
@@ -52,5 +71,4 @@
       width: 45px;
     }
   }
-
 }

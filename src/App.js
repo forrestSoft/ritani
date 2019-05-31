@@ -25,18 +25,20 @@ class App extends Component {
     autocomplete_users: 0,
     autocomplete_total: 0,
     autocomplete_open: false,
-    totalFollowers: 0
+    totalFollowers: 0,
+    search_loading: false
   }
 
   // TODO: is this really the best way to deal with debouncing?
   handleChange = async (e) => {
-    this.setState({inputValue: e.target.value})
+    this.setState({inputValue: e.target.value, search_loading: true})
 
     const result = await autocomplete_debounce(e.target.value)
     this.setState({
       autocomplete_users: result.data.items.slice(0,5),
       autocomplete_total: result.data.total_count,
-      autocomplete_open: true
+      autocomplete_open: true,
+      search_loading: false
     })
   }
 
@@ -58,7 +60,6 @@ class App extends Component {
     })
   }
 
-  // This is so slimey
   handleMoar(){
     axios(this.state.hasMoar)
       .then((xhr)=>{
@@ -71,15 +72,10 @@ class App extends Component {
       })
   }
 
-  handleClose(){
-    // console.log('close')
-    // this.setState({autocomplete_open: false})
-  }
-
   render(){
     return (
 
-      <div className="App" onClick={this.handleClose.bind(this)} >
+      <div className="App" >
         <header className="App-header">Ritani interview assesment</header>
         <div className="flex">
           <section className="gr-2">
@@ -89,7 +85,8 @@ class App extends Component {
               autocomplete_users={this.state.autocomplete_users}
               autocomplete_total={this.state.autocomplete_total}
               autocomplete_value={this.state.inputValue}
-              autocomplete_open={this.state.autocomplete_open} />
+              autocomplete_open={this.state.autocomplete_open} 
+              loading={this.state.search_loading} />
           </section>
           
           <section className="gr-1">

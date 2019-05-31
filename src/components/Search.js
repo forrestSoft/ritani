@@ -14,7 +14,8 @@ function Search(props){
 				autocomplete_total={props.autocomplete_total}
 				autocomplete_users={props.autocomplete_users}
 				value={props.autocomplete_value}
-				open={props.autocomplete_open}  />
+				open={props.autocomplete_open}  
+				loading={props.loading}/>
 		</section>
 	)
 }

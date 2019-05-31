@@ -6,7 +6,10 @@ import './Autosuggest.scss'
 function Autosuggest(props){
 	return(
 		<div className="autosuggest">
-			<input value={props.value} onChange = { props.onChange } placeholder="GitHub Username" />
+		{console.log('a',props.loading)}
+			
+			<span className={props.loading ? 'loading' : null }>
+			<input value={props.value} onChange = { props.onChange } placeholder="GitHub Username" className={props.loading ? 'loading' : null }/></span>
 			 { (props.open) ? 
 			 	<div>
 					<ul>
