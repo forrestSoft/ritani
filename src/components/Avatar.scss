@@ -3,7 +3,7 @@
   display: flex;
   margin: 3px;  
   background:#fff;
-  padding: 4px 4px 15px 4px;
+  padding: 5px 5px 16px 5px;
 
   input {
   	display: block;
@@ -15,10 +15,9 @@
     height: 50px; 
     width: 50px;
     z-index: 2;
-    
     border: 1px solid #ccc;
     background-clip: content-box;
-
+    box-sizing: border-box;
   }
   
   @keyframes img {
@@ -29,16 +28,16 @@
     content: '';
     box-sizing: border-box;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 30px;
-    height: 30px;
-    margin-top: -15px;
-    margin-left: -15px;
+    top: 25%;
+    left: 28%;
+    width: 40%;
+    height: 30%;
+    /* margin-top: -15px; */
+    /* margin-left: -15px; */
     border-radius: 50%;
     border: 1px solid #ccc;
     border-top-color: #07d;
     animation: img .6s linear infinite;
-    // z-index: -1;
+    box-sizing: border-box;
   }
 }

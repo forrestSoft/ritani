@@ -8,9 +8,49 @@
 
   li {
     display: flex;
+    align-items: center;
+    cursor: pointer;
   }
 
+  input{
+    padding: 1.2vw 1.2vw 1.5vw 1.2vw;
+    background: #adaaaa;
+    border: 1px solid;
+    border-radius: 4px;
+    width: calc(100% - 3vw);
+    font-size: 2vw;
+
+    &::placeholder{
+      color: #615858;
+      font-style: italic;
+    }
+  }
+
+  p, a{
+    margin: 0;
+  }
+
+  a{
+    font-size: 1.4vw;
+    font-weight: 100;
+    font-style: italic;
+    text-decoration: none;
+    color: #521f1f;
+  }
+
+  span{
+    font-size: 1.6vw;
+    font-style: italic;
+    color: #3c3b3b;
+  }
   .avatar_wrapper {
     margin-right: 2vh;
+    margin-left: 0;
+
+    img{
+      height: 45px;
+      width: 45px;
+    }
   }
+
 }
